@@ -1,4 +1,5 @@
 import json
+import os
 import time
 
 from openai import OpenAI, RateLimitError
@@ -24,7 +25,7 @@ class OpenAIHandler(BaseHandler):
     def __init__(self, model_name, temperature) -> None:
         super().__init__(model_name, temperature)
         self.model_style = ModelStyle.OpenAI
-        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"), base_url=os.getenv("OPENAI_BASE_URL"))
         self.is_fc_model = True
         self.model_name = model_name
         test_message = self.client.chat.completions.create(
