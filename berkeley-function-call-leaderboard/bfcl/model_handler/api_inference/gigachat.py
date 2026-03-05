@@ -75,7 +75,7 @@ class GigaChatHandler(BaseHandler):
             "profanity_check": False,
             "verify_ssl_certs": False,
             "scope": "GIGACHAT_API_CORP",
-            "timeout": 200,
+            "model": self.model_name
         }
 
         if os.getenv("GIGACHAT_ENV") == "prod":

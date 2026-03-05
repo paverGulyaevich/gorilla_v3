@@ -39,6 +39,7 @@ api_inference_handler_map = {
     "DeepSeek-V3": DeepSeekAPIHandler,
     "qwen3-next-80b-a3b-instruct": OpenAIHandler,
     "minimax/minimax-m2.5": OpenAIHandler,
+    "Minimax-M2.5": OpenAIHandler,
     "o1-2024-12-17-FC": OpenAIHandler,
     "o1-2024-12-17": OpenAIHandler,
     # "o1-mini-2024-09-12-FC": OpenAIHandler,  # o1-mini-2024-09-12 does not support function calling
